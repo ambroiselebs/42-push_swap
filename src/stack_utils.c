@@ -12,16 +12,24 @@
 
 #include "../push_swap.h"
 
-void	free_stack(t_stack_node **stack)
+t_stack_node	*get_highest(t_stack_node *stack)
 {
-	t_stack_node	*tmp;
+	t_stack_node	*highest_node;
+	int				high;
 
-	while (*stack)
+	if (stack == NULL)
+		return (NULL);
+	high = INT_MIN;
+	while (stack)
 	{
-		tmp = (*stack)->next;
-		free(*stack);
-		(*stack) = tmp;
+		if (stack->value > high)
+		{
+			high = stack->value;
+			highest_node = stack;
+		}
+		stack = stack->next;
 	}
+	return (highest_node);
 }
 
 t_stack_node	*find_last(t_stack_node *head)
@@ -55,4 +63,24 @@ int	stack_len(t_stack_node *stack)
 		stack = stack->next;
 	}
 	return (counter);
+}
+
+t_stack_node	*get_smallest(t_stack_node *stack)
+{
+	long			smallest;
+	t_stack_node	*smallest_node;
+
+	if (NULL == stack)
+		return (NULL);
+	smallest = LONG_MAX;
+	while (stack)
+	{
+		if (stack->value < smallest)
+		{
+			smallest = stack->value;
+			smallest_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (smallest_node);
 }

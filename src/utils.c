@@ -42,3 +42,28 @@ void	return_with_error(t_stack_node **a)
 	ft_printf("Error\n");
 	exit(EXIT_FAILURE);
 }
+
+void	free_stack(t_stack_node **stack)
+{
+	t_stack_node	*tmp;
+
+	while (*stack)
+	{
+		tmp = (*stack)->next;
+		free(*stack);
+		(*stack) = tmp;
+	}
+}
+
+int	is_sorted(t_stack_node *stack)
+{
+	if (stack == NULL)
+		return (10);
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}

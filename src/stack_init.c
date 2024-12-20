@@ -55,3 +55,12 @@ void	init_stack(t_stack_node **a, char **argv, int argv_splited)
 		argv++;
 	}
 }
+
+void	init_nodes(t_stack_node *a, t_stack_node *b)
+{
+	set_current_pos(a);
+	set_current_pos(b);
+	set_target(a, b);
+	set_price(a, b);
+	set_cheapest(b);
+}

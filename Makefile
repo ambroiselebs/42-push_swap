@@ -3,9 +3,10 @@ CC				= cc
 CFLAGS			= -Wall -Wextra -Werror -O3
 INCLUDES		= -Ilibs/Libft -I.
 LIBS			= -Llibs/Libft -lft
-SRC				= main.c src/stack.c src/utils.c src/stack_utils.c \
+SRC				= main.c src/stack_init.c src/utils.c src/stack_utils.c \
 					src/commands/push.c src/commands/swap.c src/commands/rotate.c \
-					src/commands/reverse_rotate.c
+					src/commands/reverse_rotate.c src/sort/small.c src/sort/normal.c \
+					src/stack_arrange.c
 OBJ				= $(SRC:.c=.o)
 LIBFT			= libs/Libft/libft.a
 

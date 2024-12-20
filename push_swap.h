@@ -33,15 +33,29 @@ typedef struct s_stack_node
 
 t_stack_node	*find_last(t_stack_node *head);
 t_stack_node	*get_cheapest(t_stack_node *stack);
+t_stack_node	*get_highest(t_stack_node *stack);
+t_stack_node	*get_smallest(t_stack_node *stack);
 
 void			return_with_error(t_stack_node **a);
 void			init_stack(t_stack_node **a, char **argv, int argv_splited);
 void			free_stack(t_stack_node **stack);
 void			append_node(t_stack_node **stack, int nbr);
+void			small_sort(t_stack_node **a);
+void			set_current_pos(t_stack_node *stack);
+void			set_target(t_stack_node *a, t_stack_node *b);
+void			set_cheapest(t_stack_node *b);
+void			set_price(t_stack_node *a, t_stack_node *b);
+void			r_stacks(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest);
+void			rr_stacks(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest);
+void			finish_r(t_stack_node **stack, t_stack_node *top, char name);
+void			move_nodes(t_stack_node **a, t_stack_node **b);
+void			init_nodes(t_stack_node *a, t_stack_node *b);
+void			handle_five(t_stack_node **a, t_stack_node **b);
 
 int				check_repetition(t_stack_node *node, int nbr);
 int				check_digit(char *s);
 int				stack_len(t_stack_node *stack);
+int				is_sorted(t_stack_node *stack);
 
 void			push(t_stack_node **dest, t_stack_node **src);
 void			pa(t_stack_node **a, t_stack_node **b, int checker);
