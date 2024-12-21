@@ -28,24 +28,21 @@ void	swap(t_stack_node **head)
 	(*head)->prev = NULL;
 }
 
-void	sa(t_stack_node **a, int checker)
+void	sa(t_stack_node **a)
 {
 	swap(a);
-	if (!checker)
-		ft_printf("sa\n");
+	ft_printf("sa\n");
 }
 
-void	sb(t_stack_node **b, int checker)
+void	sb(t_stack_node **b)
 {
 	swap(b);
-	if (!checker)
-		ft_printf("sb\n");
+	ft_printf("sb\n");
 }
 
-void	ss(t_stack_node **a, t_stack_node **b, int checker)
+void	ss(t_stack_node **a, t_stack_node **b)
 {
 	swap(a);
 	swap(b);
-	if (!checker)
-		ft_printf("ss\n");
+	ft_printf("ss\n");
 }

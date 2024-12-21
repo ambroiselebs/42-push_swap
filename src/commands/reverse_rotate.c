@@ -28,24 +28,21 @@ void	reverse_rotate(t_stack_node **stack)
 	last->next->prev = last;
 }
 
-void	rra(t_stack_node **a, int checker)
+void	rra(t_stack_node **a)
 {
 	reverse_rotate(a);
-	if (!checker)
-		ft_printf("rra\n");
+	ft_printf("rra\n");
 }
 
-void	rrb(t_stack_node **b, int checker)
+void	rrb(t_stack_node **b)
 {
 	reverse_rotate(b);
-	if (!checker)
-		ft_printf("rrb\n");
+	ft_printf("rrb\n");
 }
 
-void	rrr(t_stack_node **a, t_stack_node **b, int checker)
+void	rrr(t_stack_node **a, t_stack_node **b)
 {
 	reverse_rotate(a);
 	reverse_rotate(b);
-	if (!checker)
-		ft_printf("rrr\n");
+	ft_printf("rrr\n");
 }

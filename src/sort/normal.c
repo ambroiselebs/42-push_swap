@@ -15,7 +15,7 @@
 void	r_stacks(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest)
 {
 	while (*a != cheapest->target_node && *b != cheapest)
-		rr(a, b, 0);
+		rr(a, b);
 	set_current_pos(*a);
 	set_current_pos(*b);
 }
@@ -23,7 +23,7 @@ void	r_stacks(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest)
 void	rr_stacks(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest)
 {
 	while (*a != cheapest->target_node && *b != cheapest)
-		rrr(a, b, 0);
+		rrr(a, b);
 	set_current_pos(*a);
 	set_current_pos(*b);
 }
@@ -35,16 +35,16 @@ void	finish_r(t_stack_node **stack, t_stack_node *top, char name)
 		if (name == 'a')
 		{
 			if (top->above_median)
-				ra(stack, 0);
+				ra(stack);
 			else
-				rra(stack, 0);
+				rra(stack);
 		}
 		else if (name == 'b')
 		{
 			if (top->above_median)
-				rb(stack, 0);
+				rb(stack);
 			else
-				rrb(stack, 0);
+				rrb(stack);
 		}
 	}
 }
@@ -60,5 +60,5 @@ void	move_nodes(t_stack_node **a, t_stack_node **b)
 		rr_stacks(a, b, cheapest);
 	finish_r(b, cheapest, 'b');
 	finish_r(a, cheapest->target_node, 'a');
-	pa(a, b, 0);
+	pa(a, b);
 }

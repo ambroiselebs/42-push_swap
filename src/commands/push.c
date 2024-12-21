@@ -36,16 +36,14 @@ void	push(t_stack_node **dest, t_stack_node **src)
 	}
 }
 
-void	pa(t_stack_node **a, t_stack_node **b, int checker)
+void	pa(t_stack_node **a, t_stack_node **b)
 {
 	push(a, b);
-	if (!checker)
-		ft_printf("pa\n");
+	ft_printf("pa\n");
 }
 
-void	pb(t_stack_node **a, t_stack_node **b, int checker)
+void	pb(t_stack_node **a, t_stack_node **b)
 {
 	push(b, a);
-	if (!checker)
-		ft_printf("pb\n");
+	ft_printf("pb\n");
 }

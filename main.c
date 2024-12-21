@@ -23,7 +23,7 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 	else
 	{
 		while (len_a-- > 3)
-			pb(a, b, 0);
+			pb(a, b);
 	}
 	small_sort(a);
 	while (*b)
@@ -35,10 +35,10 @@ void	push_swap(t_stack_node **a, t_stack_node **b)
 	smallest = get_smallest(*a);
 	if (smallest->above_median)
 		while (*a != smallest)
-			ra(a, 0);
+			ra(a);
 	else
 		while (*a != smallest)
-			rra(a, 0);
+			rra(a);
 }
 
 int	main(int argc, char **argv)
@@ -59,7 +59,7 @@ int	main(int argc, char **argv)
 	if (!is_sorted(a))
 	{
 		if (stack_len(a) == 2)
-			sa(&a, 0);
+			sa(&a);
 		else if (stack_len(a) == 3)
 			small_sort(&a);
 		else

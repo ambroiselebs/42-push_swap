@@ -18,11 +18,11 @@ void	small_sort(t_stack_node **a)
 
 	highest = get_highest(*a);
 	if (*a == highest)
-		ra(a, 0);
+		ra(a);
 	else if ((*a)->next == highest)
-		rra(a, 0);
+		rra(a);
 	if ((*a)->value > (*a)->next->value)
-		sa(a, 0);
+		sa(a);
 }
 
 void	handle_five(t_stack_node **a, t_stack_node **b)
@@ -31,6 +31,6 @@ void	handle_five(t_stack_node **a, t_stack_node **b)
 	{
 		init_nodes(*a, *b);
 		finish_r(a, get_smallest(*a), 'a');
-		pb(a, b, 0);
+		pb(a, b);
 	}
 }
