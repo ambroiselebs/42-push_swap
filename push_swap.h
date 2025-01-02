@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aberenge <marvin@42.fr>                    #+#  +:+       +#+        */
+/*   By: aberenge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-18 21:01:49 by aberenge          #+#    #+#             */
-/*   Updated: 2024-12-18 21:01:49 by aberenge         ###   ########.fr       */
+/*   Created: 2024/12/18 21:01:49 by aberenge          #+#    #+#             */
+/*   Updated: 2025/01/02 15:01:34 by aberenge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,10 @@ void			set_current_pos(t_stack_node *stack);
 void			set_target(t_stack_node *a, t_stack_node *b);
 void			set_cheapest(t_stack_node *b);
 void			set_price(t_stack_node *a, t_stack_node *b);
-void			r_stacks(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest);
-void			rr_stacks(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest);
+void			r_stacks(t_stack_node **a, t_stack_node **b,
+					t_stack_node *cheapest);
+void			rr_stacks(t_stack_node **a, t_stack_node **b,
+					t_stack_node *cheapest);
 void			finish_r(t_stack_node **stack, t_stack_node *top, char name);
 void			move_nodes(t_stack_node **a, t_stack_node **b);
 void			init_nodes(t_stack_node *a, t_stack_node *b);
