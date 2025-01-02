@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex_fd_maj.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aberenge <marvin@42.fr>                    #+#  +:+       +#+        */
+/*   By: aberenge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-12 22:25:23 by aberenge          #+#    #+#             */
-/*   Updated: 2024-12-12 22:25:23 by aberenge         ###   ########.fr       */
+/*   Created: 2024/12/12 22:25:23 by aberenge          #+#    #+#             */
+/*   Updated: 2025/01/02 15:04:43 by aberenge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 int	ft_print_hex_fd_maj(int nb, int fd)
 {
