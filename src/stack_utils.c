@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aberenge <marvin@42.fr>                    #+#  +:+       +#+        */
+/*   By: aberenge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-19 13:52:43 by aberenge          #+#    #+#             */
-/*   Updated: 2024-12-19 13:52:43 by aberenge         ###   ########.fr       */
+/*   Created: 2024/12/19 13:52:43 by aberenge          #+#    #+#             */
+/*   Updated: 2025/01/13 19:33:15 by aberenge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ t_stack_node	*get_highest(t_stack_node *stack)
 	t_stack_node	*highest_node;
 	int				high;
 
+	highest_node = NULL;
 	if (stack == NULL)
 		return (NULL);
 	high = INT_MIN;
