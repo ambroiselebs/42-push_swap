@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.c                                            :+:      :+:    :+:   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aberenge <marvin@42.fr>                    #+#  +:+       +#+        */
+/*   By: aberenge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-18 21:14:15 by aberenge          #+#    #+#             */
-/*   Updated: 2024-12-18 21:14:15 by aberenge         ###   ########.fr       */
+/*   Created: 2024/12/18 21:14:15 by aberenge          #+#    #+#             */
+/*   Updated: 2025/01/13 17:26:58 by aberenge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	init_stack(t_stack_node **a, char **argv, int argv_splited)
 		if (!check_digit(*argv))
 			return_with_error(a);
 		nbr = ft_atoi(*argv);
-		if (nbr > INT_MAX || nbr < INT_MIN)
+		if (nbr >= INT_MAX || nbr <= INT_MIN)
 			return_with_error(a);
 		if (check_repetition(*a, (int) nbr))
 			return_with_error(a);
