@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aberenge <marvin@42.fr>                    #+#  +:+       +#+        */
+/*   By: aberenge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-18 20:59:12 by aberenge          #+#    #+#             */
-/*   Updated: 2024-12-18 20:59:12 by aberenge         ###   ########.fr       */
+/*   Created: 2024/12/18 20:59:12 by aberenge          #+#    #+#             */
+/*   Updated: 2025/01/16 12:33:54 by aberenge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	(void) b;
 	if (argc < 2)
-		return (ft_printf("Error\n"), 1);
+		return (ft_printf("\n"), 1);
 	argv_splited = (argc == 2);
 	if (argv_splited)
 		argv = ft_split(argv[1], ' ');
